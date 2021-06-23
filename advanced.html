@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	<title>Advanced Search</title>
+	<style type="text/css">
+		.navitems li{
+			margin-left: 20px;
+		}
+		.navitems li:hover{
+             text-decoration: underline;
+        }
+        .form-div{
+        	display: grid;
+        	grid-template-columns: 200px 550px 400px;
+        	margin-top: 15px;
+        }
+        .form-div input{
+        	width: 550px;
+        	height: 25px;
+        	outline-color: blue;
+        	border: 0.5px solid #DADCE0;
+        }
+        .double{
+        	width: 550px;
+        	padding-left: 0;
+  
+        }
+        .double input{
+        	width: 47%;
+        	outline-color: blue;
+        	border: 0.5px solid #DADCE0;
+  
+        }
+        .form-div label{
+        	font-size: 14px;
+        }
+        .form-div small{
+        	margin-left: 30px;
+        	font-size: 12px;
+        }
+        .child{
+        	display: inline;
+        }
+        select{
+        	background-color: #F5F5F5;
+        	height: 30px;
+        }
+        .form-dif{
+        	display: grid;
+        	grid-template-columns: 200px 550px 400px;
+        	margin-top: 15px;
+        }
+        .linkss li a{
+        	text-decoration: none;
+        }
+        .linkss li:hover{
+        	text-decoration: underline;
+        }
+        .footer-link{
+        		margin-bottom: 15px;
+        		margin-top: 15px;
+        		margin-left: 100px;
+        	}
+        	.footer-link div a{
+        		text-decoration: none;
+        		color: #6F6F6F;
+        	}
+        	.footer-link div a:hover{
+        		text-decoration: underline;
+        	}
+        	@media screen and (max-width: 756px) {
+        		.navitems li{
+        			font-size: 12px;
+        			margin-left: 20px;
+        		}
+        		small{
+        			display: none;
+        		}
+        		.child{
+        			display: none;
+        		}
+        	    select{
+        	    	width: 42%;
+        	    }
+        	    .form-div input{
+        	    	width: 40%;
+        	    }
+        	    .double{
+        	    	width: 43%;
+        	    }
+        	    .double input{
+        	    	width: 35%;
+        	    }
+        	}
+	</style>
+</head>
+<body>
+	<!-- the navigation -->
+	<nav>
+		<!-- the google search logo -->
+		<img src="google-logo2.jpg" style="width: 80px; margin-top: 15px;">
+	<ul class="navitems" style="list-style-type: none; display: inline-block; float: right; margin-top: 10px;">
+		<li style="display: inline;"><a href="index.html" style="text-decoration: none; color: black;">Google search</a></li>
+		<li style="display: inline;"><a href="image.html" style="text-decoration: none; color: black;">Image search</a></li>
+	</ul>
+</nav>
+
+<p style="font-size: 22px; color: #E15025; margin-left: 33px; margin-top: 41px; margin-bottom: 25px;">Advanced Search</p>
+
+<hr>
+
+<!-- the form containing all the search input for the advanced search -->
+<form method="get" action="https://google.com/search" style="margin-left: 30px;">
+	<div class="form-div">
+		<p style="display: inline; font-size: 19px;">Find pages with...</p>
+		<div  style="display: inline;">&nbsp;</div>
+		<p class="child" style="font-weight: bold;">To do this in the search box.</p>
+	</div>
+	<!-- the "all these words" field with its input field and text instruction all contained in a div  -->
+	<div class="form-div">
+		<label>all these words:</label>
+		<input type="text" name="as_q">
+		<small>Type the important words: tri-colour rat terrier</small>
+	</div>
+	<!-- the "this exact word or phrase" field with its input field and text instruction all contained in a div  -->
+	<div class="form-div">
+		<label>this exact word or phrase:</label>
+		<input type="text" name="as_epq">
+		<small>Put exact words in quotes: "rat terrier"</small>
+	</div>
+	<!-- the "any of these words" field with its input field and text instruction all contained in a div  -->
+	<div class="form-div">
+		<label>any of these words:</label>
+		<input type="text" name="as_oq">
+		<small>Type OR between all the words you want: miniature OR standard</small>
+	</div>
+	<!-- the "none of these words" field with its input field and text instruction all contained in a div  -->
+	<div class="form-div">
+		<label>none of these words:</label>
+		<input type="text" name="as_eq">
+		<small>Put a minus sign just before words that you don't want:<br/> -rodent, -"Jack Russell"</small>
+	</div>
+	<!-- the "numbers ranging fron" field with its input field and text instruction all contained in a div  -->
+	<div class="form-dif">
+		<label>numbers ranging from:</label>
+		<!-- i put double input field from the "numbers ranging from" field in this div with a class of double -->
+		<div class="double">
+			<input style="height: 25px;" type="text" name="as_nlo"> <span style="text-align: center;">to</span> <input  style="height: 25px; 
+			margin-right: -8px;" type="text" name="as_nhi">
+		</div>
+		<small>Put two full stops between the numbers and add a unit of measurement:<br /> 10..35 kg, £300..£500, 2010..2011</small>
+	</div>
+
+<hr style="margin-top: 30px;">
+    <!-- the language field with its select options and text instruction all contained in a div-->
+	<div class="form-div">
+		<label>language:</label>
+		<select name="lr">
+			<option selected value="">any language</option>
+			<option>Nigeria</option>
+			<option>America</option>
+			<option>Croatia</option>
+		</select>
+		<small>Find pages in the language that you select.</small>
+	</div>
+	<!-- the region field with its select options and text instruction all contained in a div-->
+	<div class="form-div">
+		<label>region:</label>
+		<select name="cr">
+			<option selected value="">any region</option>
+			<option>Nigeria</option>
+			<option>America</option>
+			<option>Croatia</option>
+		</select>
+		<small>Find pages published in a particular region.</small>
+	</div>
+	<!-- the last update field with its select options and text instruction all contained in a div-->
+	<div class="form-div">
+		<label>last update:</label>
+		<select name="as_qdr">
+			<option selected value="all">anytime</option>
+			<option>Nigeria</option>
+			<option>America</option>
+			<option>Croatia</option>
+		</select>
+		<small>Find pages updated within the time that you specify.</small>
+	</div>
+	<!-- the "site or domain" field with its input field and text instruction all contained in a div  -->
+	<div class="form-div">
+		<label>site or domain:</label>
+		<input type="text" name="as_sitesearch">
+		<small>Search one site (like wikipedia.org ) or limit your results to a domain like <br /> .edu, .org or .gov</small>
+	</div>
+	<!-- the terms appearing field with its select options and text instruction all contained in a div-->
+	<div class="form-div">
+		<label>terms appearing:</label>
+		<select name="as_occt">
+			<option selected value="all">anywhere in the page</option>
+			<option>Nigeria</option>
+			<option>America</option>
+			<option>Croatia</option>
+		</select>
+		<small>Search for terms in the whole page, page title or web address, or links to <br /> the page you're looking for.</small>
+	</div>
+	<!-- the SafeSearch field with its select options and text instruction all contained in a div-->
+	<div class="form-div">
+		<label>SafeSearch:</label>
+		<select name="safe">
+			<option selected value="images">show explicit results</option>
+			<option>Nigeria</option>
+			<option>America</option>
+			<option>Croatia</option>
+		</select>
+		<small>Tell SafeSearch whether to filter sexually explicit content.</small>
+	</div>
+	<!-- the file type field with its select options and text instruction all contained in a div-->
+	<div class="form-div">
+		<label>file type:</label>
+		<select name="as_filetype">
+			<option selected value="">any format</option>
+			<option>Nigeria</option>
+			<option>America</option>
+			<option>Croatia</option>
+		</select>
+		<small>Find pages in the format that you prefer.</small>
+	</div>
+	<!-- the usage rights field with its select options and text instruction all contained in a div-->
+	<div class="form-div">
+		<label>usage rights:</label>
+		<select name="tbs">
+			<option selected value="">not filtered by licence</option>
+			<option>Nigeria</option>
+			<option>America</option>
+			<option>Croatia</option>
+		</select>
+		<small>Find pages that you are free to use yourself.</small>
+	</div>
+	<!-- the advanced search button contained in a div-->
+	<div class="form-dif">
+		<input style="height: 30px; width:120px; margin-left: 100%; background-color: #3A7FED; outline: none; color: white;" type="submit" value="Advanced search">
+	</div>
+</form>
+
+<hr style="margin-top: 30px;">
+
+<p style="margin-left: 37px;">You can also...</p>
+<ul class="linkss" style="list-style-type: none;">
+	<li><a href="#">Find pages that are similar to a URL</a></li>
+	<li><a href="#">Search pages that you've visited</a></li>
+	<li><a href="#">Use operators in the search box</a></li>
+	<li><a href="#">Customise your search settings</a></li>
+</ul>
+
+<!-- the footer -->
+<footer style="background-color: #F2F2F2; bottom: 0; margin-bottom: -7px; width: 100%; left: 0;">
+	<div style="margin: 15px 30px; color: #6F6F6F;">Nigeria</div>
+	<hr style="background-color: #DADCE0;">
+	<div class="footer-link">
+	    <div>
+			<a href="#" style="margin-left: 15px;">Help</a>
+    		<a href="#" style="margin-left: 15px;">Privacy</a>
+    		<a href="#" style="margin-left: 15px;">Terms</a>
+	    </div>
+	</div>
+    	</footer>
+</body>
+</html>

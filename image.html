@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	<title>Image Search</title>
+	<style type="text/css">
+    	.navitems li{
+        			margin-left: 20px;
+        		}
+        	.navitems li:hover{
+                text-decoration: underline;
+        	}
+        	.googleform{
+        		margin: 0 auto;
+        		text-align: center;
+        	}
+        	.googletext{
+        		font-size: 90px;
+        		font-weight: bold;
+        		margin-bottom: 30px;
+        		margin-top: 35px;
+        	}
+        	.search-box{
+        			width: 560px;
+        		}
+        	.footer-link{
+        		display: grid;
+        		justify-content: center;
+        		grid-template-columns: 30% 30% 30%;
+        		grid-gap: 35px;
+        		margin: 0 auto;
+        		margin-bottom: 15px;
+        		margin-top: 15px;
+        	}
+        	.footer-link div a{
+        		text-decoration: none;
+        		color: #6F6F6F;
+        	}
+        	.footer-link div a:hover{
+        		text-decoration: underline;
+        	}
+        	@media screen and (max-width: 756px) {
+        		.navitems li{
+        			font-size: 12px;
+        			margin-left: 20px;
+        		}
+        		.search-box{
+        			width: 90%;
+        		}
+        		.footer-link{
+        			grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+        			align-self: center;
+        		}
+        	}
+    </style>
+</head>
+<body>
+    <!-- the navigation -->
+<nav style="text-align: right;">
+	<ul class="navitems" style="list-style-type: none;">
+		<li style="display: inline;"><a href="index.html" style="text-decoration: none; color: black;">Google search</a></li>
+		<li style="display: inline;"><a href="advanced.html" style="text-decoration: none; color: black;">Advanced search</a></li>
+	</ul>
+</nav>
+<div class="googleform" style="margin-top: 110px;">
+    <!-- the google image search logo -->
+	<img src="image-logo3.jpg" style="width: 315px;">
+    <!-- the form containing the search input -->
+    <form method="get" action="http://images.google.com/images" style="margin-top: 30px;">
+        <input class="search-box" style="display: block; margin: 0 auto; height: 39px; border-radius: 20px; margin-bottom: 25px; outline: none; border: 0.03px solid #DADCE0;" type="text" name="q">
+    </form>
+</div>
+<!-- the footer -->
+<footer style="background-color: #F2F2F2; position: fixed; bottom: 0; width: 100%; left: 0;">
+	<div style="margin: 15px 30px; color: #6F6F6F;">Nigeria</div>
+	<hr style="background-color: #DADCE0;">
+	<div class="footer-link">
+		<div style="text-align: center;">
+			<a href="#" style="margin-left: 15px;">About</a>
+    		<a href="#" style="margin-left: 15px;">Advertising</a>
+    		<a href="#" style="margin-left: 15px;">Business</a>
+    		<a href="#" style="margin-left: 15px;">How search works</a>
+	    </div>
+	    <div style="text-align: center;"><a href="#">Carbon neutral since 2007</a></div>
+	    <div style="text-align: center;">
+			<a href="#" style="margin-left: 15px;">Privacy</a>
+    		<a href="#" style="margin-left: 15px;">Terms</a>
+    		<a href="#" style="margin-left: 15px;">Settings</a>
+	    </div>
+	</div>
+</footer>
+</body>
+</html>
